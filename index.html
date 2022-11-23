@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Font size</title>
+    
+  </head>
+  <body>
+    <div class="fontsize">
+      <div class="input">
+        <input class="get" id="get" placeholder="Type something" />
+        <button class="inc" id="inc">+</button>
+        <button class="dec" id="dec">-</button>
+
+        <output class="out" id="out" placeholder="see the changes" />
+      </div>
+    </div>
+    <script>
+      let inp = document.getElementById("get");
+      let increment = document.getElementById("inc");
+      let decrement = document.getElementById("dec");
+      let size = 20;
+      increment.addEventListener("click", enlarge);
+      function enlarge() {
+        size = size + 2;
+        inp.style.fontSize = `${size}px`;
+      }
+      decrement.addEventListener("click", reduce);
+      function reduce() {
+        size = size - 2;
+        inp.style.fontSize = `${size}px`;
+      }
+    </script>
+  </body>
+</html>
